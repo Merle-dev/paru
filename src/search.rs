@@ -475,7 +475,7 @@ pub fn interactive_menu(
         all_pkgs.insert(0, pkg);
     }
 
-    if config.sort_mode == SortMode::TopDown {
+    if config.sort_mode != SortMode::TopDown {
         for (n, pkg) in all_pkgs.iter().enumerate() {
             print_any_pkg(config, n, pad, pkg)
         }
